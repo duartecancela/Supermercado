@@ -2,17 +2,36 @@
 {
     public class Fruit
     {
-        public int id;
-        public string name;
-        public double price;
+        private int id { get; set; }
+        private string name { get; set; }
+        private double price { get; set; }
 
         // Parameterized Constructor
         // User defined
-        public Fruit(int i, string s, double d)
+        public Fruit(int id, string name, double price)
         {
-            id = i;
-            name = s;
-            price = d;
+            this.id = id;
+            this.name = name;
+            this.price = price;
         }
+
+        //public int Id
+        //{
+        //    get { return id; }
+        //    set { id = value; }
+        //}
+
+        //public int Id
+        //{
+        //    get { return id; }
+        //    set { id = value; }
+        //}
+
+        //public double Price
+        //{
+        //    get { return price; }
+        //    set { price = value; }
+        //}
+
     }
 }
