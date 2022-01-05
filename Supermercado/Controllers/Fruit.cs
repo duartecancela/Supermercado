@@ -2,9 +2,9 @@
 {
     public class Fruit
     {
-        private int id { get; set; }
-        private string name { get; set; }
-        private double price { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+        public double price { get; set; }
 
         // Parameterized Constructor
         // User defined
@@ -14,24 +14,6 @@
             this.name = name;
             this.price = price;
         }
-
-        //public int Id
-        //{
-        //    get { return id; }
-        //    set { id = value; }
-        //}
-
-        //public int Id
-        //{
-        //    get { return id; }
-        //    set { id = value; }
-        //}
-
-        //public double Price
-        //{
-        //    get { return price; }
-        //    set { price = value; }
-        //}
 
     }
 }
