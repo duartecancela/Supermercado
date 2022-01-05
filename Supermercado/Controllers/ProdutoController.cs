@@ -1,12 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-
 namespace Supermercado.Controllers
 {
     public class ProdutoController : Controller
     {
        
-        List<Fruit> fruits = new List<Fruit>() { new(1, "Banana", 2.4), new(2, "Orange", 1.4), new(1, "Apple", 1.8) };
+        List<Fruit> fruits = new List<Fruit>() { new(1, "Banana", 2.4), new(2, "Orange", 1.4), new(3, "Apple", 1.8) };
 
         public IActionResult Index()
         {
@@ -30,6 +29,23 @@ namespace Supermercado.Controllers
             ViewData["fruitprice"] = fruit.price;
             return View();
 
+        }
+
+        //public JsonResult ListJSON()
+        //{
+        //    return Json(fruits);
+        //}
+
+        public JsonResult ListJSON(int id)
+        {
+            if (id >= 1 )
+                {
+                    return Json(fruits[id - 1]); 
+                }
+            else
+                {
+                    return Json(fruits);
+            }  
         }
     }
 }
