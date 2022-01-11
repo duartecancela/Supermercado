@@ -14,14 +14,14 @@ namespace Supermercado.Controllers
            
         }
 
-        public IActionResult List()
+        public IActionResult List1()
         {
             ViewBag.fruits = fruits;
-            return View();
+            return View(fruits);
 
         }
 
-        public IActionResult Details(int id)
+        public IActionResult Details1(int id)
         {
             var fruit = fruits[id];
             ViewData["fruitId"] = fruit.id;
@@ -46,6 +46,20 @@ namespace Supermercado.Controllers
                 {
                     return Json(fruits);
             }  
+        }
+
+        public IActionResult List()
+        {
+            
+            return View(fruits);
+
+        }
+
+        public IActionResult Details(int id)
+        {
+            var fruit = fruits[id];
+            return View(fruit);
+
         }
     }
 }

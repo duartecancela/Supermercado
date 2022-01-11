@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Product List Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Prodcut List</h1>
+    <p>Product List</p>
+</div>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Namet</th>
+        <th>Price</th>
+    </tr>
+    @foreach (var fruit in ViewBag.Fruits)
+    {  
+        <tr>
+            <td>@fruit.id</td>
+            <td>@fruit.name</td>
+            <td>@fruit.price</td>
+        </tr>   
+    }
+</table>
