@@ -76,5 +76,19 @@ namespace Supermercado.Controllers
             fruits.Add(new(4, "Lime", 2.0));
             return RedirectToAction("Details", "Produto", model["id"]);
         }
+
+        public IActionResult Edit(int id)
+        {
+            var fruit = fruits[id];
+            return View(fruit);
+
+        }
+
+        public IActionResult Delete(int id)
+        {
+            var fruit = fruits[id];
+            return View(fruit);
+
+        }
     }
 }
