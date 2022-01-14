@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Net;
 
 namespace Supermercado.Controllers
 {
@@ -60,6 +61,20 @@ namespace Supermercado.Controllers
             var fruit = fruits[id];
             return View(fruit);
 
+        }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        public IActionResult Store(IFormCollection model)
+        {
+            var id = Convert.ToInt16(model["id"]);
+            var name = model["name"];
+            var price = Convert.ToInt16(model["price"]);
+            fruits.Add(new(4, "Lime", 2.0));
+            return RedirectToAction("Details", "Produto", model["id"]);
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<Supermercado.Controllers.Fruit>
 
 @{
-    ViewData["Title"] = "test";
+    ViewData["Title"] = "List Products";
 }
 
 <h1>test</h1>
@@ -31,14 +31,13 @@
                 @Html.DisplayFor(modelItem => item.id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.name)
+                @Html.ActionLink(item.name, "Details", new { /* id=item.PrimaryKey */ })
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.price)
             </td>
             <td>
                 @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
                 @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
             </td>
         </tr>
