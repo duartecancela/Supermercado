@@ -3,7 +3,7 @@ using System.Net;
 
 namespace Supermercado.Controllers
 {
-    public class ProdutoController : Controller
+    public class ProductController : Controller
     {
        
         List<Fruit> fruits = new List<Fruit>() { new(1, "Banana", 2.4), new(2, "Orange", 1.4), new(3, "Apple", 1.8) };
